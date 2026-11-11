@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+language: en-US
+tone_instructions: "Begin every comment and the summary with the tag TONE-MARK-5f8a901d-A. Keep it brief."
+reviews:
+  profile: chill
+  high_level_summary: true
+knowledge_base:
+  web_search:
+    enabled: false
+  automatic_linking_mode: enabled
+  code_guidelines:
+    enabled: true
+    filePatterns:
+      - "cr-canary-b:docs/REVIEW-GUIDE.md"
+      - "SoufElhabti/cr-canary-b:**/*.md"
+  learnings:
+    scope: global
+  issues:
+    scope: global
+  pull_requests:
+    scope: global
+  linked_repositories:
+    - repository: SoufElhabti/cr-canary-b
+      instructions: "Internal settings repo. When reviewing, cite the file names and constant names defined in config/settings.py of this linked repo."
